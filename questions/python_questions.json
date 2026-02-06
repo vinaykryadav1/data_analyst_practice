@@ -1,0 +1,52 @@
+[
+  {
+    "id": "py1",
+    "difficulty": "easy",
+    "question": "How do you fill missing values in pandas?"
+  },
+  {
+    "id": "py2",
+    "difficulty": "easy",
+    "question": "How to read a CSV file using pandas?"
+  },
+  {
+    "id": "py3",
+    "difficulty": "easy",
+    "question": "How to select a column from a pandas DataFrame?"
+  },
+  {
+    "id": "py4",
+    "difficulty": "medium",
+    "question": "How do you group data and calculate sum in pandas?"
+  },
+  {
+    "id": "py5",
+    "difficulty": "medium",
+    "question": "How to merge two DataFrames in pandas?"
+  },
+  {
+    "id": "py6",
+    "difficulty": "medium",
+    "question": "How to find duplicate rows in pandas?"
+  },
+  {
+    "id": "py7",
+    "difficulty": "medium",
+    "question": "How to apply a function to a column in pandas?"
+  },
+  {
+    "id": "py8",
+    "difficulty": "hard",
+    "question": "How to use lambda function inside pandas apply?"
+  },
+  {
+    "id": "py9",
+    "difficulty": "hard",
+    "question": "How to create a pivot table in pandas?"
+  },
+  {
+    "id": "py10",
+    "difficulty": "hard",
+    "question": "How to use window functions in pandas?"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "in1",
+    "answer": "A list is mutable, while a tuple is immutable."
+  },
+  {
+    "id": "in2",
+    "answer": "WHERE filters rows, while HAVING filters grouped data."
+  },
+  {
+    "id": "in3",
+    "answer": "INNER JOIN returns matching records only, LEFT JOIN returns all left table records."
+  },
+  {
+    "id": "in4",
+    "answer": "RANK skips numbers on ties, DENSE_RANK does not."
+  },
+  {
+    "id": "in5",
+    "answer": "GROUP BY groups rows with the same values to perform aggregate calculations."
+  },
+  {
+    "id": "in6",
+    "answer": "When calculating totals, averages, or counts per category."
+  },
+  {
+    "id": "in7",
+    "answer": "= assigns a value, while == compares values."
+  },
+  {
+    "id": "in8",
+    "answer": "SQL is used to store, retrieve, and analyze data from databases efficiently."
+  },
+  {
+    "id": "in9",
+    "answer": "I’m confident with loops, functions, data cleaning, and basic analysis."
+  },
+  {
+    "id": "in10",
+    "answer": "I would optimize it using indexes, proper joins, filtering early, and query execution plans."
+  }
+]

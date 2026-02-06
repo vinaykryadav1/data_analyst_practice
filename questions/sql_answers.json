@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sql1",
+    "answer": "SELECT * FROM employees WHERE salary > 50000;"
+  },
+  {
+    "id": "sql2",
+    "answer": "SELECT e.name, d.department_name FROM employees e JOIN departments d ON e.department_id = d.id;"
+  },
+  {
+    "id": "sql3",
+    "answer": "SELECT department_id, COUNT(*) AS total_employees FROM employees GROUP BY department_id;"
+  },
+  {
+    "id": "sql4",
+    "answer": "SELECT MAX(salary) AS second_highest FROM employees WHERE salary < (SELECT MAX(salary) FROM employees);"
+  },
+  {
+    "id": "sql5",
+    "answer": "SELECT * FROM employees WHERE join_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH);"
+  },
+  {
+    "id": "sql6",
+    "answer": "SELECT department_id, COUNT(*) AS emp_count FROM employees GROUP BY department_id HAVING COUNT(*) > 5;"
+  },
+  {
+    "id": "sql7",
+    "answer": "SELECT * FROM employees e WHERE salary = (SELECT MAX(salary) FROM employees WHERE department_id = e.department_id);"
+  },
+  {
+    "id": "sql8",
+    "answer": "SELECT * FROM employees e WHERE salary > (SELECT AVG(salary) FROM employees WHERE department_id = e.department_id);"
+  },
+  {
+    "id": "sql9",
+    "answer": "SELECT * FROM (SELECT e.*, DENSE_RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS rnk FROM employees e) t WHERE rnk <= 3;"
+  },
+  {
+    "id": "sql10",
+    "answer": "SELECT department_id FROM employees GROUP BY department_id HAVING MIN(salary) >= 30000;"
+  }
+]

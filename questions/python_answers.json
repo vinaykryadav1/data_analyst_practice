@@ -1,0 +1,42 @@
+[
+  {
+    "id": "py1",
+    "answer": "df.fillna(0, inplace=True)  # fill missing values with 0\n# or\ndf['col'].fillna(df['col'].mean(), inplace=True)"
+  },
+  {
+    "id": "py2",
+    "answer": "import pandas as pd\ndf = pd.read_csv('file.csv')"
+  },
+  {
+    "id": "py3",
+    "answer": "df['column_name']\n# or\ndf.loc[:, 'column_name']"
+  },
+  {
+    "id": "py4",
+    "answer": "df.groupby('column_name')['amount'].sum().reset_index()"
+  },
+  {
+    "id": "py5",
+    "answer": "pd.merge(df1, df2, on='id', how='inner')"
+  },
+  {
+    "id": "py6",
+    "answer": "df[df.duplicated()]\n# remove duplicates\ndf.drop_duplicates(inplace=True)"
+  },
+  {
+    "id": "py7",
+    "answer": "df['new_col'] = df['col'].apply(lambda x: x*2)"
+  },
+  {
+    "id": "py8",
+    "answer": "df['status'] = df['salary'].apply(lambda x: 'High' if x > 50000 else 'Low')"
+  },
+  {
+    "id": "py9",
+    "answer": "pd.pivot_table(df, values='sales', index='region', columns='product', aggfunc='sum')"
+  },
+  {
+    "id": "py10",
+    "answer": "df['rank'] = df.groupby('department')['salary'].rank(method='dense', ascending=False)\n# rolling window\ndf['rolling_avg'] = df['sales'].rolling(window=3).mean()"
+  }
+]

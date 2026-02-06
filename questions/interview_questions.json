@@ -1,0 +1,52 @@
+[
+  {
+    "id": "in1",
+    "difficulty": "easy",
+    "question": "What is the difference between a list and a tuple?"
+  },
+  {
+    "id": "in2",
+    "difficulty": "easy",
+    "question": "What is the difference between WHERE and HAVING?"
+  },
+  {
+    "id": "in3",
+    "difficulty": "easy",
+    "question": "What is the difference between INNER JOIN and LEFT JOIN?"
+  },
+  {
+    "id": "in4",
+    "difficulty": "medium",
+    "question": "What is the difference between RANK and DENSE_RANK?"
+  },
+  {
+    "id": "in5",
+    "difficulty": "medium",
+    "question": "What does GROUP BY do in SQL?"
+  },
+  {
+    "id": "in6",
+    "difficulty": "medium",
+    "question": "When would you use GROUP BY in real projects?"
+  },
+  {
+    "id": "in7",
+    "difficulty": "medium",
+    "question": "What is the difference between == and = in Python?"
+  },
+  {
+    "id": "in8",
+    "difficulty": "hard",
+    "question": "What is SQL and why is it used in data analysis?"
+  },
+  {
+    "id": "in9",
+    "difficulty": "hard",
+    "question": "How confident are you with Python logic?"
+  },
+  {
+    "id": "in10",
+    "difficulty": "hard",
+    "question": "What would you do if your SQL query is very slow?"
+  }
+]
