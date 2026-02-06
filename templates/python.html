@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Practice</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="topbar">
+    <div class="logo">
+        <a href="/">Practice Platform</a>
+    </div>
+
+    <div class="tabs">
+        <a href="/sql">SQL</a>
+        <a href="/python" class="active">Python</a>
+        <a href="/powerbi">Power BI</a>
+    </div>
+
+    <div class="auth">
+        {% if session.get("user") %}
+            <a href="/logout" class="btn">Logout</a>
+        {% else %}
+            <a href="/login" class="btn">Login</a>
+        {% endif %}
+    </div>
+</div>
+
+<!-- ================= LAYOUT ================= -->
+<div class="layout">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+        <h3>Python Questions</h3>
+
+        {% for q in questions %}
+        <div class="qcard" onclick="loadQ('{{q.id}}', `{{q.question}}`)">
+            {{ q.question }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+
+        <!-- QUESTION -->
+        <div class="questionBox">
+            <h2 id="qtext">Select question</h2>
+        </div>
+
+        <!-- CODE EDITOR -->
+        <textarea id="pycode" placeholder="Write Python code here..."></textarea>
+
+        <!-- BUTTONS -->
+        <div class="btns">
+            <button class="run-btn" onclick="runPython()">Run Code</button>
+            <button class="reveal-btn" onclick="revealPython()">Reveal Answer</button>
+        </div>
+
+        <!-- OUTPUT -->
+        <div class="outputBox">
+            <h3>Output</h3>
+            <pre id="pyout"></pre>
+        </div>
+
+        <!-- ANSWER -->
+        <div class="answerBox">
+            <h3>Expected Answer</h3>
+            <pre id="answerText"></pre>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+
+    <!-- LEFT LOGO -->
+    <div class="logo">
+        <a href="/">Practice Platform</a>
+    </div>
+
+    <!-- CENTER NAV -->
+    <nav class="nav-center">
+        <a href="/sql" class="nav-link">SQL</a>
+        <a href="/python" class="nav-link">Python</a>
+        <a href="/powerbi" class="nav-link">Power BI</a>
+        <a href="/interview" class="nav-link">Interview</a>
+    </nav>
+
+    <!-- RIGHT USER -->
+    <div class="nav-right">
+        {% if session.get("user") %}
+            <a href="/logout" class="btn">Logout</a>
+        {% else %}
+            <a href="/login" class="btn">Login</a>
+        {% endif %}
+    </div>
+
+</header>
+
+<div class="page">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
