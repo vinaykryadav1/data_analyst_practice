@@ -545,3 +545,15 @@ pre{
 .easy{color:#22c55e}
 .medium{color:#facc15}
 .hard{color:#ef4444}
+
+.footer-text{
+    text-align:center;
+    font-weight:600;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:14px;
+    margin-top:50px;
+    color:#9ca3af;
+    border-top:1px solid #1e293b;
+    padding-top:12px;
+}
+
