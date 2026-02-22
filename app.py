@@ -223,8 +223,8 @@ def interview_mode():
     return render_template("interview_mode.html", questions=q)
 
 # ================= DATASET UPLOAD =================
-
-UPLOAD_FOLDER = "uploads"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/upload_csv", methods=["POST"])
@@ -233,13 +233,17 @@ def upload_csv():
 
     if not file:
         return jsonify({"msg": "No file uploaded"})
-
+        
+    if file.filename == "":
+        return jsonify({"msg": "Empty filename"})
+    
     filename = file.filename
 
     # -------- SAVE FOR PYTHON USE ----------
     py_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(py_path)
-
+    print("Saved at:", file_path)
+    print("Files in upload folder:", os.listdir(UPLOAD_FOLDER))
     # -------- SAVE FOR SQL USE (existing logic) ----------
     import pandas as pd
 
@@ -314,3 +318,4 @@ def logout():
 # ================= START =================
 if __name__ == "__main__":
     app.run(debug=True)
+
