@@ -1,0 +1,282 @@
+[
+  {
+    "id": "in1",
+    "difficulty": "easy",
+    "question": "What is the difference between a list and a tuple?"
+  },
+  {
+    "id": "in2",
+    "difficulty": "easy",
+    "question": "What is the difference between WHERE and HAVING?"
+  },
+  {
+    "id": "in3",
+    "difficulty": "easy",
+    "question": "What is the difference between INNER JOIN and LEFT JOIN?"
+  },
+  {
+    "id": "in4",
+    "difficulty": "medium",
+    "question": "What is the difference between RANK and DENSE_RANK?"
+  },
+  {
+    "id": "in5",
+    "difficulty": "medium",
+    "question": "What does GROUP BY do in SQL?"
+  },
+  {
+    "id": "in6",
+    "difficulty": "medium",
+    "question": "When would you use GROUP BY in real projects?"
+  },
+  {
+    "id": "in7",
+    "difficulty": "medium",
+    "question": "What is the difference between == and = in Python?"
+  },
+  {
+    "id": "in8",
+    "difficulty": "hard",
+    "question": "What is SQL and why is it used in data analysis?"
+  },
+  {
+    "id": "in9",
+    "difficulty": "hard",
+    "question": "How confident are you with Python logic?"
+  },
+  {
+    "id": "in10",
+    "difficulty": "hard",
+    "question": "What would you do if your SQL query is very slow?"
+  },
+  {
+    "id": "in11",
+    "difficulty": "easy",
+    "question": "What is a primary key?"
+  },
+  {
+    "id": "in12",
+    "difficulty": "easy",
+    "question": "What is a foreign key?"
+  },
+  {
+    "id": "in13",
+    "difficulty": "easy",
+    "question": "What is NULL in SQL?"
+  },
+  {
+    "id": "in14",
+    "difficulty": "easy",
+    "question": "What is the difference between COUNT(*) and COUNT(column)?"
+  },
+  {
+    "id": "in15",
+    "difficulty": "easy",
+    "question": "What is a function in Python?"
+  },
+  {
+    "id": "in16",
+    "difficulty": "medium",
+    "question": "What is a window function in SQL?"
+  },
+  {
+    "id": "in17",
+    "difficulty": "medium",
+    "question": "What is normalization?"
+  },
+  {
+    "id": "in18",
+    "difficulty": "medium",
+    "question": "What is indexing in SQL?"
+  },
+  {
+    "id": "in19",
+    "difficulty": "medium",
+    "question": "What is a subquery?"
+  },
+  {
+    "id": "in20",
+    "difficulty": "medium",
+    "question": "What is the difference between DELETE and TRUNCATE?"
+  },
+  {
+    "id": "in21",
+    "difficulty": "medium",
+    "question": "What is pandas used for?"
+  },
+  {
+    "id": "in22",
+    "difficulty": "medium",
+    "question": "What is NumPy?"
+  },
+  {
+    "id": "in23",
+    "difficulty": "medium",
+    "question": "What is data cleaning?"
+  },
+  {
+    "id": "in24",
+    "difficulty": "medium",
+    "question": "What is EDA?"
+  },
+  {
+    "id": "in25",
+    "difficulty": "medium",
+    "question": "What is the difference between list comprehension and loop?"
+  },
+  {
+    "id": "in26",
+    "difficulty": "hard",
+    "question": "What is a star schema?"
+  },
+  {
+    "id": "in27",
+    "difficulty": "hard",
+    "question": "What is ETL?"
+  },
+  {
+    "id": "in28",
+    "difficulty": "hard",
+    "question": "What is the difference between UNION and UNION ALL?"
+  },
+  {
+    "id": "in29",
+    "difficulty": "hard",
+    "question": "What is a CTE?"
+  },
+  {
+    "id": "in30",
+    "difficulty": "hard",
+    "question": "What is data warehousing?"
+  },
+  {
+    "id": "in31",
+    "difficulty": "hard",
+    "question": "How do you handle missing data?"
+  },
+  {
+    "id": "in32",
+    "difficulty": "hard",
+    "question": "What is the difference between accuracy and precision?"
+  },
+  {
+    "id": "in33",
+    "difficulty": "hard",
+    "question": "What is regression?"
+  },
+  {
+    "id": "in34",
+    "difficulty": "hard",
+    "question": "What is clustering?"
+  },
+  {
+    "id": "in35",
+    "difficulty": "medium",
+    "question": "What is GROUP BY with HAVING?"
+  },
+  {
+    "id": "in36",
+    "difficulty": "medium",
+    "question": "What is the use of DISTINCT?"
+  },
+  {
+    "id": "in37",
+    "difficulty": "medium",
+    "question": "What is lambda function in Python?"
+  },
+  {
+    "id": "in38",
+    "difficulty": "medium",
+    "question": "What is exception handling in Python?"
+  },
+  {
+    "id": "in39",
+    "difficulty": "hard",
+    "question": "How do you improve SQL query performance?"
+  },
+  {
+    "id": "in40",
+    "difficulty": "hard",
+    "question": "What is data visualization?"
+  },
+  {
+    "id": "in41",
+    "difficulty": "medium",
+    "question": "What is JOIN condition?"
+  },
+  {
+    "id": "in42",
+    "difficulty": "medium",
+    "question": "What is a database?"
+  },
+  {
+    "id": "in43",
+    "difficulty": "medium",
+    "question": "What is aggregation?"
+  },
+  {
+    "id": "in44",
+    "difficulty": "hard",
+    "question": "What is overfitting?"
+  },
+  {
+    "id": "in45",
+    "difficulty": "hard",
+    "question": "What is bias and variance?"
+  },
+  {
+    "id": "in46",
+    "difficulty": "medium",
+    "question": "What is data modeling?"
+  },
+  {
+    "id": "in47",
+    "difficulty": "medium",
+    "question": "What is a KPI?"
+  },
+  {
+    "id": "in48",
+    "difficulty": "hard",
+    "question": "What is A/B testing?"
+  },
+  {
+    "id": "in49",
+    "difficulty": "hard",
+    "question": "What is time complexity?"
+  },
+  {
+    "id": "in50",
+    "difficulty": "hard",
+    "question": "What is data governance?"
+  },
+  { "id": "in51", "difficulty": "medium", "question": "Write SQL query to find duplicate records." },
+  { "id": "in52", "difficulty": "medium", "question": "Write SQL query to get 2nd highest salary." },
+  { "id": "in53", "difficulty": "medium", "question": "Write SQL query to calculate total sales per category." },
+  { "id": "in54", "difficulty": "medium", "question": "Write SQL query to find top 5 customers by sales." },
+  { "id": "in55", "difficulty": "hard", "question": "Write SQL query for running total." },
+  { "id": "in56", "difficulty": "hard", "question": "Write SQL query for month-over-month growth." },
+  { "id": "in57", "difficulty": "medium", "question": "How to remove duplicates in pandas?" },
+  { "id": "in58", "difficulty": "medium", "question": "How to handle missing values in pandas?" },
+  { "id": "in59", "difficulty": "medium", "question": "How to merge two dataframes?" },
+  { "id": "in60", "difficulty": "medium", "question": "How to group data in pandas?" },
+  { "id": "in61", "difficulty": "hard", "question": "How to create new column based on condition in pandas?" },
+  { "id": "in62", "difficulty": "hard", "question": "How to read large CSV file efficiently?" },
+  { "id": "in63", "difficulty": "hard", "question": "How to calculate rolling average in pandas?" },
+  { "id": "in64", "difficulty": "medium", "question": "Write SQL query to count customers per city." },
+  { "id": "in65", "difficulty": "medium", "question": "Write SQL query using CASE statement." },
+  { "id": "in66", "difficulty": "hard", "question": "Write SQL query to find customers with no orders." },
+  { "id": "in67", "difficulty": "hard", "question": "Write SQL query for rank of employees." },
+  { "id": "in68", "difficulty": "medium", "question": "How to sort dataframe in pandas?" },
+  { "id": "in69", "difficulty": "medium", "question": "How to filter rows in pandas?" },
+  { "id": "in70", "difficulty": "hard", "question": "How to optimize SQL query performance?" },
+  { "id": "in71", "difficulty": "hard", "question": "Write Python code to connect SQL database." },
+  { "id": "in72", "difficulty": "medium", "question": "How to export dataframe to Excel?" },
+  { "id": "in73", "difficulty": "medium", "question": "Write SQL query to find latest record per user." },
+  { "id": "in74", "difficulty": "hard", "question": "How to pivot table in pandas?" },
+  { "id": "in75", "difficulty": "hard", "question": "Write SQL query for cumulative sum by date." },
+  { "id": "in76", "difficulty": "medium", "question": "How to rename columns in pandas?" },
+  { "id": "in77", "difficulty": "medium", "question": "How to change data type in pandas?" },
+  { "id": "in78", "difficulty": "hard", "question": "Write SQL query to delete duplicates." },
+  { "id": "in79", "difficulty": "hard", "question": "How to create function in Python?" },
+  { "id": "in80", "difficulty": "hard", "question": "How to automate data pipeline using Python?" }
+]

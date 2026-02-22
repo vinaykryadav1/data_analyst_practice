@@ -1,0 +1,162 @@
+[
+  {
+    "id": "pbi1",
+    "answer": "Power BI is a business analytics tool by Microsoft used to visualize data and share insights through dashboards and reports."
+  },
+  {
+    "id": "pbi2",
+    "answer": "Main components: Power BI Desktop, Power BI Service, Power BI Mobile, Power Query, Power Pivot, and Power BI Gateway."
+  },
+  {
+    "id": "pbi3",
+    "answer": "DAX (Data Analysis Expressions) is a formula language used in Power BI for calculations and measures."
+  },
+  {
+    "id": "pbi4",
+    "answer": "Calculated column is computed row-by-row and stored in table. Measure is calculated dynamically based on filter context."
+  },
+  {
+    "id": "pbi5",
+    "answer": "Power Query is used for data cleaning, transformation, and ETL before loading data into Power BI."
+  },
+  {
+    "id": "pbi6",
+    "answer": "Relationship connects tables using keys like primary key and foreign key to enable filtering across tables."
+  },
+  {
+    "id": "pbi7",
+    "answer": "Dashboard is a single-page view of visuals created in Power BI Service to monitor KPIs."
+  },
+  {
+    "id": "pbi8",
+    "answer": "Import mode loads data into Power BI memory. DirectQuery connects live to database without storing data."
+  },
+  {
+    "id": "pbi9",
+    "answer": "Filter context is the set of filters applied to data when calculating measures in Power BI."
+  },
+  {
+    "id": "pbi10",
+    "answer": "Star schema has one fact table and multiple dimension tables. It improves performance and simplifies relationships in Power BI."
+  },
+  { "id": "pbi11", "answer": "A slicer is a visual filter that allows users to filter data interactively." },
+  { "id": "pbi12", "answer": "A visual is a graphical representation of data such as charts, tables, and maps." },
+  { "id": "pbi13", "answer": "Power BI Service is a cloud platform to publish, share, and manage reports and dashboards." },
+  { "id": "pbi14", "answer": "Power BI Desktop is a Windows application used to create reports and data models." },
+  { "id": "pbi15", "answer": "A data model defines relationships between tables to enable analysis." },
+  { "id": "pbi16", "answer": "Cardinality defines relationship type such as one-to-many or many-to-many." },
+  { "id": "pbi17", "answer": "Cross filter direction determines how filters flow between related tables." },
+  { "id": "pbi18", "answer": "Row Level Security restricts data access for specific users." },
+  { "id": "pbi19", "answer": "A calculated table is created using DAX and stored in the model." },
+  { "id": "pbi20", "answer": "Drill-through allows users to navigate to detailed reports filtered by selected data." },
+  { "id": "pbi21", "answer": "KPI visual shows performance against a target value." },
+  { "id": "pbi22", "answer": "Conditional formatting changes visual appearance based on values." },
+  { "id": "pbi23", "answer": "Bookmark saves the current report view including filters and visuals." },
+  { "id": "pbi24", "answer": "Incremental refresh updates only new or changed data instead of full dataset." },
+  { "id": "pbi25", "answer": "Context transition converts row context into filter context in DAX calculations." },
+  { "id": "pbi26", "answer": "CALCULATE modifies filter context to evaluate an expression." },
+  { "id": "pbi27", "answer": "ALL removes filters from specified columns; ALLEXCEPT keeps filters on specified columns." },
+  { "id": "pbi28", "answer": "Time intelligence functions calculate YTD, MTD, QTD, and previous period values." },
+  { "id": "pbi29", "answer": "Composite model combines Import and DirectQuery sources in one report." },
+  { "id": "pbi30", "answer": "Aggregation improves performance by summarizing data at higher levels." },
+  { "id": "pbi31", "answer": "Gateway connects on-premises data sources to Power BI Service." },
+  { "id": "pbi32", "answer": "Data refresh updates dataset with latest data from source." },
+  { "id": "pbi33", "answer": "Hierarchy organizes data levels like Year > Quarter > Month." },
+  { "id": "pbi34", "answer": "Many-to-many relationship allows multiple matches between tables." },
+  { "id": "pbi35", "answer": "Optimize by reducing columns, using star schema, limiting visuals, and optimizing DAX." },
+  { "id": "pbi36", "answer": "VertiPaq is the in-memory engine that compresses and processes data efficiently." },
+  { "id": "pbi37", "answer": "SUM adds column values; SUMX iterates row by row and evaluates an expression." },
+  { "id": "pbi38", "answer": "Report level filters apply to whole report, page level to one page, visual level to specific visual." },
+  { "id": "pbi39", "answer": "Data profiling analyzes column distribution, quality, and statistics in Power Query." },
+  { "id": "pbi40", "answer": "M language is used in Power Query for data transformation." },
+  { "id": "pbi41", "answer": "Role playing dimension uses same dimension table multiple times for different relationships." },
+  { "id": "pbi42", "answer": "Bidirectional filtering may cause ambiguity and performance issues." },
+  { "id": "pbi43", "answer": "Custom visuals are user-created visuals imported from marketplace." },
+  { "id": "pbi44", "answer": "Workspace is a collaborative space to manage reports and datasets." },
+  { "id": "pbi45", "answer": "Import stores data in memory, DirectQuery queries source live, Live connection connects to existing dataset." },
+  { "id": "pbi46", "answer": "Dataflow is cloud-based ETL process in Power BI Service." },
+  { "id": "pbi47", "answer": "Drill-down allows navigating through hierarchy levels in a visual." },
+  { "id": "pbi48", "answer": "Performance Analyzer identifies slow visuals and DAX queries." },
+  { "id": "pbi49", "answer": "DAX Studio is an external tool used to analyze and optimize DAX queries." },
+  { "id": "pbi50", "answer": "Best practices include simple layout, proper KPIs, consistent colors, and minimal clutter." },
+  {
+  "id": "pbi51",
+  "answer": "Total Sales = SUM(Sales[Amount])"
+  },
+  {
+  "id": "pbi52",
+  "answer": "Profit = SUM(Sales[Amount]) - SUM(Sales[Cost])"
+  },
+  {
+  "id": "pbi53",
+  "answer": "Profit % = DIVIDE([Profit], [Total Sales])"
+  },
+  {
+  "id": "pbi54",
+  "answer": "Sales YTD = TOTALYTD([Total Sales], 'Date'[Date])"
+  },
+  {
+  "id": "pbi55",
+  "answer": "Previous Month Sales = CALCULATE([Total Sales], PREVIOUSMONTH('Date'[Date]))"
+  },
+  {
+  "id": "pbi56",
+  "answer": "MoM % = DIVIDE([Total Sales] - [Previous Month Sales], [Previous Month Sales])"
+  },
+  {
+  "id": "pbi57",
+  "answer": "Running Total = CALCULATE([Total Sales], FILTER(ALL('Date'), 'Date'[Date] <= MAX('Date'[Date])))"
+  },
+  {
+  "id": "pbi58",
+  "answer": "Total All Sales = CALCULATE([Total Sales], ALL(Sales))"
+  },
+  {
+  "id": "pbi59",
+  "answer": "Customer Count = DISTINCTCOUNT(Sales[CustomerID])"
+  },
+  {
+  "id": "pbi60",
+  "answer": "Top 5 Sales = CALCULATE([Total Sales], TOPN(5, ALL(Products), [Total Sales]))"
+  },
+  {
+  "id": "pbi61",
+  "answer": "Rank Product = RANKX(ALL(Products), [Total Sales], , DESC)"
+  },
+  {
+  "id": "pbi62",
+  "answer": "Avg Sales per Customer = DIVIDE([Total Sales], DISTINCTCOUNT(Sales[CustomerID]))"
+  },
+  {
+  "id": "pbi63",
+  "answer": "Last Year Sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))"
+  },
+  {
+  "id": "pbi64",
+  "answer": "YoY % = DIVIDE([Total Sales] - [Last Year Sales], [Last Year Sales])"
+  },
+  {
+  "id": "pbi65",
+  "answer": "Row Count = COUNTROWS(Sales)"
+  },
+  {
+  "id": "pbi66",
+  "answer": "High Sales = IF([Total Sales] > 100000, \"High\", \"Low\")"
+  },
+  {
+  "id": "pbi67",
+  "answer": "Sales 2024 = CALCULATE([Total Sales], 'Date'[Year] = 2024)"
+  },
+  {
+  "id": "pbi68",
+  "answer": "Selected Year Sales = CALCULATE([Total Sales], VALUES('Date'[Year]))"
+  },
+  {
+  "id": "pbi69",
+  "answer": "% of Total = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(Sales)))"
+  },
+  {
+  "id": "pbi70",
+  "answer": "Title = \"Sales Report - \" & SELECTEDVALUE('Date'[Year])"
+  }
+]

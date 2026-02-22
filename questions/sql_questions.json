@@ -1,0 +1,539 @@
+[
+  {
+    "id": "sql1",
+    "difficulty": "easy",
+    "question": "Find all employees with salary > 50000",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql2",
+    "difficulty": "easy",
+    "question": "Show employee names and their departments",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql3",
+    "difficulty": "easy",
+    "question": "Count total number of employees in each department",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql4",
+    "difficulty": "easy",
+    "question": "Write a query to find employees whose name starts with the letter ‘A’",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql5",
+    "difficulty": "easy",
+    "question": "Write a query to find employees whose salary is between 40,000 and 80,000.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql6",
+    "difficulty": "easy",
+    "question": "Write a query to find the number of employees in each department.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql7",
+    "difficulty": "easy",
+    "question": "Write a query to display employees with NULL values in the manager column.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql8",
+    "difficulty": "easy",
+    "question": "Write a query to find employees hired in the last 30 days .",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql9",
+    "difficulty": "easy",
+    "question": "Write a query to fetch the full_address and extract the first occurrence of a 6-digit number as pincode from the user_addresses table.",
+    "tables": [
+      "user_addresses"
+    ]
+  },
+  {
+    "id": "sql10",
+    "difficulty": "medium",
+    "question": "Find the second highest salary from employees table",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql11",
+    "difficulty": "medium",
+    "question": "List employees who joined in the last 6 months",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql12",
+    "difficulty": "medium",
+    "question": "Find departments with more than 5 employees",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql13",
+    "difficulty": "medium",
+    "question": "Get highest salary employee from each department",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql14",
+    "difficulty": "medium",
+    "question": "Write a query to display departments having more than 3 employees.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql15",
+    "difficulty": "medium",
+    "question": "Write a query to find departments where the average salary is greater than 60,000.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql16",
+    "difficulty": "medium",
+    "question": "Write a query to find all employees whose salary is greater than the average salary.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql17",
+    "difficulty": "medium",
+    "question": "Write a query to display department names that have at least one employee.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql18",
+    "difficulty": "medium",
+    "question": "Write a query to find employees who work in the same department as “Aman”",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql19",
+    "difficulty": "medium",
+    "question": "Write a query to find employees who earn the highest salary in each department.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql20",
+    "difficulty": "medium",
+    "question": "Write a query to find employees whose salary is higher than their manager’s salary.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql21",
+    "difficulty": "medium",
+    "question": "Write a query to show month-wise revenue.",
+    "tables": [
+      "monthly_sales"
+    ]
+  },
+  {
+    "id": "sql22",
+    "difficulty": "medium",
+    "question": "Write a query to calculate profit and label it as “Profit” or “Loss”.",
+    "tables": [
+      "sales"
+    ]
+  },
+  {
+    "id": "sql23",
+    "difficulty": "medium",
+    "question": "Write a query to calculate cumulative salary by department.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql24",
+    "difficulty": "medium",
+    "question": "Write a query to find employees hired on the same date",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql25",
+    "difficulty": "medium",
+    "question": "Write a query to identify gaps in employee IDs",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql26",
+    "difficulty": "medium",
+    "question": "Write a query to find the department with the highest salary variance.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql27",
+    "difficulty": "medium",
+    "question": "Write a query to find employees who do not have a manager assigned (NULL handling)",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql28",
+    "difficulty": "hard",
+    "question": "Find employees whose salary is above the average salary of their department",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql29",
+    "difficulty": "hard",
+    "question": "Find the top 3 highest paid employees in each department",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql30",
+    "difficulty": "hard",
+    "question": "Find departments where no employee has salary less than 30000",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql31",
+    "difficulty": "hard",
+    "question": "Write a query to find the top 2 highest paid employees in each department.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql32",
+    "difficulty": "hard",
+    "question": "Write a query to calculate a running total of salary ordered by hire date",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql33",
+    "difficulty": "hard",
+    "question": "Write a query to compare each employee’s salary with the department average salary",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql34",
+    "difficulty": "hard",
+    "question": "Write a query to remove duplicate records using a window function",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql35",
+    "difficulty": "hard",
+    "question": "Write a query to find employees who joined immediately after another employee.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql36",
+    "difficulty": "hard",
+    "question": "Write a query to calculate the difference between current and previous salary",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql37",
+    "difficulty": "hard",
+    "question": "Write a query to replace NULL values in a salary column with zero.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql38",
+    "difficulty": "hard",
+    "question": "Write a query to find departments with declining employee count.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql39",
+    "difficulty": "hard",
+    "question": "Write a query using a CTE to remove duplicate records.",
+    "tables": [
+      "orders"
+    ]
+  },
+  {
+    "id": "sql40",
+    "difficulty": "hard",
+    "question": "Write a query to find customers who placed orders in consecutive months.",
+    "tables": [
+      "orders"
+    ]
+  },
+  {
+    "id": "sql41",
+    "difficulty": "hard",
+    "question": "Write a query to find employees whose salary is lower than the previous employee’s salary (ordered by hire date).",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql42",
+    "difficulty": "hard",
+    "question": "Write a query to find employees who joined after the department average joining date.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql43",
+    "difficulty": "hard",
+    "question": "Write a query to calculate month-over-month sales growth.",
+    "tables": [
+      "sales"
+    ]
+  },
+  {
+    "id": "sql44",
+    "difficulty": "hard",
+    "question": "Write a query to identify customers who stopped purchasing in the last 3 months.",
+    "tables": [
+      "sales"
+    ]
+  },
+  {
+    "id": "sql45",
+    "difficulty": "hard",
+    "question": "Write a query to calculate the percentage contribution of each product to total sales.",
+    "tables": [
+      "sales",
+      "product"
+    ]
+  },
+  {
+    "id": "sql46",
+    "difficulty": "hard",
+    "question": "Write a query to find departments where employee count decreased year over year.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql47",
+    "difficulty": "hard",
+    "question": "Write a query to find customers who purchased more this month compared to the previous month.",
+    "tables": [
+      "sales"
+    ]
+  },
+  {
+    "id": "sql48",
+    "difficulty": "hard",
+    "question": "Write a query to find customers who made purchases on 3 consecutive days.",
+    "tables": [
+      "transactions"
+    ]
+  },
+  {
+    "id": "sql49",
+    "difficulty": "hard",
+    "question": "Write a query to find the median salary of employees.",
+    "tables": [
+      "employees"
+    ]
+  },
+  {
+    "id": "sql50",
+    "difficulty": "hard",
+    "question": "Write a query to find customers who placed orders in consecutive months .",
+    "tables": [
+      "sales"
+    ]
+  },
+  {
+    "id": "sql51",
+    "difficulty": "hard",
+    "question": "Find consecutive login days for each user.",
+    "tables": [
+      "logins"
+    ]
+  },
+  {
+    "id": "sql52",
+    "difficulty": "hard",
+    "question": "Write a SQL query to display the performance summary for each IPL team, including the total matches played, total wins, and total losses, ordered by the number of matches played in descending order.",
+    "tables": [
+      "ipl_match"
+    ]
+  },
+  {
+  "id": "sql53",
+  "difficulty": "easy",
+  "question": "Show total number of rows in employees table",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql54",
+  "difficulty": "easy",
+  "question": "Get unique department names",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql55",
+  "difficulty": "easy",
+  "question": "Find max salary per department",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql56",
+  "difficulty": "easy",
+  "question": "Find min salary per department",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql57",
+  "difficulty": "easy",
+  "question": "Find average salary per department",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql58",
+  "difficulty": "easy",
+  "question": "Get top 5 highest salary employees",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql59",
+  "difficulty": "easy",
+  "question": "Find length of employee names",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql60",
+  "difficulty": "easy",
+  "question": "Convert employee names to uppercase",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql61",
+  "difficulty": "easy",
+  "question": "Convert employee names to lowercase",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql62",
+  "difficulty": "easy",
+  "question": "Count distinct departments",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql63",
+  "difficulty": "medium",
+  "question": "Find employee with lowest salary",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql64",
+  "difficulty": "medium",
+  "question": "Find employee with highest salary",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql65",
+  "difficulty": "medium",
+  "question": "Calculate total salary per department",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql66",
+  "difficulty": "medium",
+  "question": "Rank employees by salary",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql67",
+  "difficulty": "medium",
+  "question": "Dense rank employees by salary",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql68",
+  "difficulty": "medium",
+  "question": "Row number by salary",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql69",
+  "difficulty": "easy",
+  "question": "Employees with salary >50000 in IT",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql70",
+  "difficulty": "easy",
+  "question": "Employees salary <30000 or HR dept",
+  "tables": ["employees"]
+  },
+  {
+  "id": "sql71",
+  "difficulty": "easy",
+  "question": "Get current date",
+  "tables": []
+  },
+  {
+  "id": "sql72",
+  "difficulty": "easy",
+  "question": "Add 7 days to current date",
+  "tables": []
+  }
+]

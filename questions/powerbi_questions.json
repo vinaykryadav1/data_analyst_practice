@@ -1,0 +1,112 @@
+[
+  {
+    "id": "pbi1",
+    "difficulty": "easy",
+    "question": "What is Power BI?"
+  },
+  {
+    "id": "pbi2",
+    "difficulty": "easy",
+    "question": "What are the main components of Power BI?"
+  },
+  {
+    "id": "pbi3",
+    "difficulty": "easy",
+    "question": "What is DAX?"
+  },
+  {
+    "id": "pbi4",
+    "difficulty": "medium",
+    "question": "Difference between calculated column and measure?"
+  },
+  {
+    "id": "pbi5",
+    "difficulty": "medium",
+    "question": "What is Power Query?"
+  },
+  {
+    "id": "pbi6",
+    "difficulty": "medium",
+    "question": "What is a relationship in Power BI?"
+  },
+  {
+    "id": "pbi7",
+    "difficulty": "medium",
+    "question": "What is a dashboard in Power BI?"
+  },
+  {
+    "id": "pbi8",
+    "difficulty": "hard",
+    "question": "What is the difference between Import mode and DirectQuery?"
+  },
+  {
+    "id": "pbi9",
+    "difficulty": "hard",
+    "question": "What are filter contexts in Power BI?"
+  },
+  {
+    "id": "pbi10",
+    "difficulty": "hard",
+    "question": "What is star schema and why is it used in Power BI?"
+  },
+  { "id": "pbi11", "difficulty": "easy", "question": "What is a slicer in Power BI?" },
+  { "id": "pbi12", "difficulty": "easy", "question": "What is a visual in Power BI?" },
+  { "id": "pbi13", "difficulty": "easy", "question": "What is Power BI Service?" },
+  { "id": "pbi14", "difficulty": "easy", "question": "What is Power BI Desktop?" },
+  { "id": "pbi15", "difficulty": "medium", "question": "What is a data model in Power BI?" },
+  { "id": "pbi16", "difficulty": "medium", "question": "What is cardinality in relationships?" },
+  { "id": "pbi17", "difficulty": "medium", "question": "What is cross filter direction?" },
+  { "id": "pbi18", "difficulty": "medium", "question": "What is Row Level Security (RLS)?" },
+  { "id": "pbi19", "difficulty": "medium", "question": "What is a calculated table?" },
+  { "id": "pbi20", "difficulty": "medium", "question": "What is drill-through in Power BI?" },
+  { "id": "pbi21", "difficulty": "medium", "question": "What is a KPI visual?" },
+  { "id": "pbi22", "difficulty": "medium", "question": "What is conditional formatting?" },
+  { "id": "pbi23", "difficulty": "medium", "question": "What is a bookmark?" },
+  { "id": "pbi24", "difficulty": "medium", "question": "What is incremental refresh?" },
+  { "id": "pbi25", "difficulty": "hard", "question": "What is context transition in DAX?" },
+  { "id": "pbi26", "difficulty": "hard", "question": "What is CALCULATE function?" },
+  { "id": "pbi27", "difficulty": "hard", "question": "Difference between ALL and ALLEXCEPT?" },
+  { "id": "pbi28", "difficulty": "hard", "question": "What is time intelligence in DAX?" },
+  { "id": "pbi29", "difficulty": "hard", "question": "What is composite model?" },
+  { "id": "pbi30", "difficulty": "hard", "question": "What is aggregation in Power BI?" },
+  { "id": "pbi31", "difficulty": "medium", "question": "What is a gateway in Power BI?" },
+  { "id": "pbi32", "difficulty": "medium", "question": "What is data refresh?" },
+  { "id": "pbi33", "difficulty": "medium", "question": "What is a hierarchy?" },
+  { "id": "pbi34", "difficulty": "medium", "question": "What is many-to-many relationship?" },
+  { "id": "pbi35", "difficulty": "hard", "question": "How do you optimize Power BI performance?" },
+  { "id": "pbi36", "difficulty": "hard", "question": "What is VertiPaq engine?" },
+  { "id": "pbi37", "difficulty": "hard", "question": "What is difference between SUM and SUMX?" },
+  { "id": "pbi38", "difficulty": "medium", "question": "What are report level, page level, and visual level filters?" },
+  { "id": "pbi39", "difficulty": "medium", "question": "What is data profiling in Power Query?" },
+  { "id": "pbi40", "difficulty": "medium", "question": "What is M language?" },
+  { "id": "pbi41", "difficulty": "hard", "question": "What is role playing dimension?" },
+  { "id": "pbi42", "difficulty": "hard", "question": "What is bidirectional filtering risk?" },
+  { "id": "pbi43", "difficulty": "medium", "question": "What is custom visual?" },
+  { "id": "pbi44", "difficulty": "medium", "question": "What is Power BI workspace?" },
+  { "id": "pbi45", "difficulty": "hard", "question": "What is difference between Import, DirectQuery and Live connection?" },
+  { "id": "pbi46", "difficulty": "medium", "question": "What is dataflow in Power BI?" },
+  { "id": "pbi47", "difficulty": "medium", "question": "What is drill-down?" },
+  { "id": "pbi48", "difficulty": "hard", "question": "What is performance analyzer?" },
+  { "id": "pbi49", "difficulty": "hard", "question": "What is DAX Studio?" },
+  { "id": "pbi50", "difficulty": "hard", "question": "What are best practices for dashboard design?" },
+  { "id": "pbi51", "difficulty": "medium", "question": "How to calculate total sales measure?" },
+  { "id": "pbi52", "difficulty": "medium", "question": "How to calculate total profit?" },
+  { "id": "pbi53", "difficulty": "medium", "question": "How to calculate profit margin %?" },
+  { "id": "pbi54", "difficulty": "medium", "question": "How to calculate Year to Date (YTD) sales?" },
+  { "id": "pbi55", "difficulty": "medium", "question": "How to calculate Previous Month sales?" },
+  { "id": "pbi56", "difficulty": "medium", "question": "How to calculate Month over Month growth %?" },
+  { "id": "pbi57", "difficulty": "hard", "question": "How to calculate running total in DAX?" },
+  { "id": "pbi58", "difficulty": "hard", "question": "How to ignore filters using DAX?" },
+  { "id": "pbi59", "difficulty": "hard", "question": "How to calculate distinct customer count?" },
+  { "id": "pbi60", "difficulty": "hard", "question": "How to calculate Top 5 products sales?" },
+  { "id": "pbi61", "difficulty": "hard", "question": "How to create rank measure in DAX?" },
+  { "id": "pbi62", "difficulty": "hard", "question": "How to calculate average sales per customer?" },
+  { "id": "pbi63", "difficulty": "hard", "question": "How to calculate last year sales?" },
+  { "id": "pbi64", "difficulty": "hard", "question": "How to calculate YoY growth %?" },
+  { "id": "pbi65", "difficulty": "medium", "question": "How to count rows in a table?" },
+  { "id": "pbi66", "difficulty": "medium", "question": "How to create conditional measure?" },
+  { "id": "pbi67", "difficulty": "hard", "question": "How to filter inside CALCULATE?" },
+  { "id": "pbi68", "difficulty": "hard", "question": "How to calculate sales for selected year only?" },
+  { "id": "pbi69", "difficulty": "hard", "question": "How to calculate percentage of total sales?" },
+  { "id": "pbi70", "difficulty": "hard", "question": "How to create dynamic title using DAX?" }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "py1",
+    "answer": "df.fillna(0, inplace=True)  # fill missing values with 0\n# or\ndf['col'].fillna(df['col'].mean(), inplace=True)"
+  },
+  {
+    "id": "py2",
+    "answer": "import pandas as pd\ndf = pd.read_csv('file.csv')"
+  },
+  {
+    "id": "py3",
+    "answer": "df['column_name']\n# or\ndf.loc[:, 'column_name']"
+  },
+  {
+    "id": "py4",
+    "answer": "df.groupby('column_name')['amount'].sum().reset_index()"
+  },
+  {
+    "id": "py5",
+    "answer": "pd.merge(df1, df2, on='id', how='inner')"
+  },
+  {
+    "id": "py6",
+    "answer": "df[df.duplicated()]\n# remove duplicates\ndf.drop_duplicates(inplace=True)"
+  },
+  {
+    "id": "py7",
+    "answer": "df['new_col'] = df['col'].apply(lambda x: x*2)"
+  },
+  {
+    "id": "py8",
+    "answer": "df['status'] = df['salary'].apply(lambda x: 'High' if x > 50000 else 'Low')"
+  },
+  {
+    "id": "py9",
+    "answer": "pd.pivot_table(df, values='sales', index='region', columns='product', aggfunc='sum')"
+  },
+  {
+    "id": "py10",
+    "answer": "df['rank'] = df.groupby('department')['salary'].rank(method='dense', ascending=False)\n# rolling window\ndf['rolling_avg'] = df['sales'].rolling(window=3).mean()"
+  },
+  { "id": "py11", "answer": "df.shape" },
+  { "id": "py12", "answer": "df.head()" },
+  { "id": "py13", "answer": "df.columns" },
+  { "id": "py14", "answer": "df.rename(columns={'old':'new'}, inplace=True)" },
+  { "id": "py15", "answer": "df[df['sales']>1000]" },
+  { "id": "py16", "answer": "df.sort_values('sales', ascending=False)" },
+  { "id": "py17", "answer": "df['new'] = df['col']*2" },
+  { "id": "py18", "answer": "df.drop('col', axis=1, inplace=True)" },
+  { "id": "py19", "answer": "df['col'].nunique()" },
+  { "id": "py20", "answer": "df['col']=df['col'].astype(int)" },
+  { "id": "py21", "answer": "pd.read_excel('file.xlsx')" },
+  { "id": "py22", "answer": "df.to_excel('out.xlsx', index=False)" },
+  { "id": "py23", "answer": "pd.merge(df1, df2, on='id', how='left')" },
+  { "id": "py24", "answer": "df['cum_sum']=df['sales'].cumsum()" },
+  { "id": "py25", "answer": "df['pct']=df['sales']/df['sales'].sum()*100" },
+  { "id": "py26", "answer": "df=df[df['sales']<df['sales'].quantile(0.95)]" },
+  { "id": "py27", "answer": "df.rename(columns={'a':'A','b':'B'}, inplace=True)" },
+  { "id": "py28", "answer": "df.reset_index(drop=True,inplace=True)" },
+  { "id": "py29", "answer": "df.set_index('id', inplace=True)" },
+  { "id": "py30", "answer": "df['mapped']=df['col'].map({'A':1,'B':2})" },
+  { "id": "py31", "answer": "df[(df['a']>10) & (df['b']<5)]" },
+  { "id": "py32", "answer": "df[['A','B']] = df['col'].str.split('-', expand=True)" },
+  { "id": "py33", "answer": "pd.concat([df1,df2])" },
+  { "id": "py34", "answer": "df.isnull().sum()" },
+  { "id": "py35", "answer": "df.dropna(inplace=True)" },
+  { "id": "py36", "answer": "df.groupby(['city','product'])['sales'].sum()" },
+  { "id": "py37", "answer": "df['roll']=df['sales'].rolling(3).sum()" },
+  { "id": "py38", "answer": "df.nlargest(5,'sales')" },
+  { "id": "py39", "answer": "df['col'].replace('A','B', inplace=True)" },
+  { "id": "py40", "answer": "df.sample(10)" },
+  { "id": "py41", "answer": "pd.read_sql('select * from table', conn)" },
+  { "id": "py42", "answer": "df.to_csv('file.csv', index=False)" },
+  { "id": "py43", "answer": "def func(x): return x*2" },
+  { "id": "py44", "answer": "for i,row in df.iterrows(): print(row['col'])" },
+  { "id": "py45", "answer": "Use vectorization, avoid loops, use numpy operations." },
+  { "id": "py46", "answer": "df['date']=pd.to_datetime(df['date'])" },
+  { "id": "py47", "answer": "df['month']=df['date'].dt.month" },
+  { "id": "py48", "answer": "pd.melt(df,id_vars=['id'])" },
+  { "id": "py49", "answer": "pd.read_csv('file.csv', chunksize=10000)" },
+  { "id": "py50", "answer": "Use cron/Airflow to schedule python script." },
+  { "id": "py51", "answer": "df['num'] = df['col'].map({'A':1,'B':2})" },
+  { "id": "py52", "answer": "map() works on Series; apply() works on rows/columns.\ndf['col'].map(dict)\ndf.apply(func, axis=1)" },
+  { "id": "py53", "answer": "df.query('sales > 1000')" },
+  { "id": "py54", "answer": "df[df['city'].isin(['Delhi','Mumbai'])]" },
+  { "id": "py55", "answer": "df.sort_values(['city','sales'], ascending=[True,False])" },
+  { "id": "py56", "answer": "df.sort_values(by='name', key=lambda x: x.str.lower())" },
+  { "id": "py57", "answer": "df = pd.merge(df1, df2, on='id').merge(df3, on='id')" },
+  { "id": "py58", "answer": "merge joins by column.\nconcat stacks dataframes.\npd.merge(df1,df2)\npd.concat([df1,df2])" },
+  { "id": "py59", "answer": "df['sum']=df.apply(lambda x: x['a']+x['b'], axis=1)" },
+  { "id": "py60", "answer": "df['status']=df['sales'].apply(lambda x:'High' if x>1000 else 'Low')" },
+  { "id": "py61", "answer": "import numpy as np\narr = np.array([1,2,3])" },
+  { "id": "py62", "answer": "np.mean(arr)" },
+  { "id": "py63", "answer": "arr[arr>5]" },
+  { "id": "py64", "answer": "np.sort(arr)" },
+  { "id": "py65", "answer": "arr.reshape(2,3)" },
+  { "id": "py66", "answer": "np.square(arr)" },
+  { "id": "py67", "answer": "arr = arr * 2  # vectorized faster than loop" },
+  { "id": "py68", "answer": "df.query('sales>100').sort_values('sales').head()" },
+  { "id": "py69", "answer": "df[df['sales']>1000].sort_values('sales', ascending=False)" },
+  { "id": "py70", "answer": "df[df['city'].map(lambda x: x.startswith('D'))].sort_values('sales')" }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "py1",
+    "difficulty": "easy",
+    "question": "How do you fill missing values in pandas?"
+  },
+  {
+    "id": "py2",
+    "difficulty": "easy",
+    "question": "How to read a CSV file using pandas?"
+  },
+  {
+    "id": "py3",
+    "difficulty": "easy",
+    "question": "How to select a column from a pandas DataFrame?"
+  },
+  {
+    "id": "py4",
+    "difficulty": "medium",
+    "question": "How do you group data and calculate sum in pandas?"
+  },
+  {
+    "id": "py5",
+    "difficulty": "medium",
+    "question": "How to merge two DataFrames in pandas?"
+  },
+  {
+    "id": "py6",
+    "difficulty": "medium",
+    "question": "How to find duplicate rows in pandas?"
+  },
+  {
+    "id": "py7",
+    "difficulty": "medium",
+    "question": "How to apply a function to a column in pandas?"
+  },
+  {
+    "id": "py8",
+    "difficulty": "hard",
+    "question": "How to use lambda function inside pandas apply?"
+  },
+  {
+    "id": "py9",
+    "difficulty": "hard",
+    "question": "How to create a pivot table in pandas?"
+  },
+  {
+    "id": "py10",
+    "difficulty": "hard",
+    "question": "How to use window functions in pandas?"
+  },
+  { "id": "py11", "difficulty": "easy", "question": "How to check dataframe shape?" },
+  { "id": "py12", "difficulty": "easy", "question": "How to view first 5 rows?" },
+  { "id": "py13", "difficulty": "easy", "question": "How to view column names?" },
+  { "id": "py14", "difficulty": "easy", "question": "How to change column name?" },
+  { "id": "py15", "difficulty": "medium", "question": "How to filter rows by condition?" },
+  { "id": "py16", "difficulty": "medium", "question": "How to sort dataframe?" },
+  { "id": "py17", "difficulty": "medium", "question": "How to create new column?" },
+  { "id": "py18", "difficulty": "medium", "question": "How to drop a column?" },
+  { "id": "py19", "difficulty": "medium", "question": "How to count unique values?" },
+  { "id": "py20", "difficulty": "medium", "question": "How to convert datatype?" },
+  { "id": "py21", "difficulty": "medium", "question": "How to read Excel file?" },
+  { "id": "py22", "difficulty": "medium", "question": "How to write Excel file?" },
+  { "id": "py23", "difficulty": "hard", "question": "How to perform left join?" },
+  { "id": "py24", "difficulty": "hard", "question": "How to create cumulative sum?" },
+  { "id": "py25", "difficulty": "hard", "question": "How to calculate percentage column?" },
+  { "id": "py26", "difficulty": "hard", "question": "How to remove outliers?" },
+  { "id": "py27", "difficulty": "medium", "question": "How to rename multiple columns?" },
+  { "id": "py28", "difficulty": "medium", "question": "How to reset index?" },
+  { "id": "py29", "difficulty": "medium", "question": "How to set index?" },
+  { "id": "py30", "difficulty": "hard", "question": "How to use map function?" },
+  { "id": "py31", "difficulty": "hard", "question": "How to apply multiple conditions?" },
+  { "id": "py32", "difficulty": "hard", "question": "How to split column?" },
+  { "id": "py33", "difficulty": "hard", "question": "How to concatenate dataframes?" },
+  { "id": "py34", "difficulty": "medium", "question": "How to check null values?" },
+  { "id": "py35", "difficulty": "medium", "question": "How to drop null rows?" },
+  { "id": "py36", "difficulty": "hard", "question": "How to use groupby multiple columns?" },
+  { "id": "py37", "difficulty": "hard", "question": "How to calculate rolling sum?" },
+  { "id": "py38", "difficulty": "hard", "question": "How to get top 5 rows by column?" },
+  { "id": "py39", "difficulty": "medium", "question": "How to replace values?" },
+  { "id": "py40", "difficulty": "medium", "question": "How to sample rows?" },
+  { "id": "py41", "difficulty": "hard", "question": "How to read SQL table in pandas?" },
+  { "id": "py42", "difficulty": "hard", "question": "How to export CSV?" },
+  { "id": "py43", "difficulty": "hard", "question": "How to create function?" },
+  { "id": "py44", "difficulty": "hard", "question": "How to loop dataframe?" },
+  { "id": "py45", "difficulty": "hard", "question": "How to optimize pandas code?" },
+  { "id": "py46", "difficulty": "medium", "question": "How to create datetime column?" },
+  { "id": "py47", "difficulty": "hard", "question": "How to get month from date?" },
+  { "id": "py48", "difficulty": "hard", "question": "How to pivot vs melt?" },
+  { "id": "py49", "difficulty": "hard", "question": "How to read large file efficiently?" },
+  { "id": "py50", "difficulty": "hard", "question": "How to automate pandas script?" },
+  { "id": "py51", "difficulty": "medium", "question": "How to use map() in pandas?" },
+  { "id": "py52", "difficulty": "medium", "question": "Difference between map() and apply()?" },
+  { "id": "py53", "difficulty": "medium", "question": "How to filter rows using query()?" },
+  { "id": "py54", "difficulty": "medium", "question": "How to filter rows using isin()?" },
+  { "id": "py55", "difficulty": "medium", "question": "How to sort by multiple columns?" },
+  { "id": "py56", "difficulty": "medium", "question": "How to sort values using lambda?" },
+  { "id": "py57", "difficulty": "medium", "question": "How to merge multiple DataFrames?" },
+  { "id": "py58", "difficulty": "medium", "question": "Difference between merge and concat?" },
+  { "id": "py59", "difficulty": "medium", "question": "How to use lambda with apply for multiple columns?" },
+  { "id": "py60", "difficulty": "hard", "question": "How to create conditional column using lambda?" },
+  { "id": "py61", "difficulty": "medium", "question": "How to create numpy array?" },
+  { "id": "py62", "difficulty": "medium", "question": "How to get mean using numpy?" },
+  { "id": "py63", "difficulty": "medium", "question": "How to filter numpy array?" },
+  { "id": "py64", "difficulty": "medium", "question": "How to sort numpy array?" },
+  { "id": "py65", "difficulty": "medium", "question": "How to reshape numpy array?" },
+  { "id": "py66", "difficulty": "hard", "question": "How to apply function on numpy array?" },
+  { "id": "py67", "difficulty": "hard", "question": "How to use vectorization instead of loop?" },
+  { "id": "py68", "difficulty": "medium", "question": "How to chain pandas operations?" },
+  { "id": "py69", "difficulty": "medium", "question": "How to filter and sort together?" },
+  { "id": "py70", "difficulty": "hard", "question": "How to combine map + lambda + filter in pandas?" }
+]
