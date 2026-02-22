@@ -223,8 +223,9 @@ def interview_mode():
     return render_template("interview_mode.html", questions=q)
 
 # ================= DATASET UPLOAD =================
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = "uploads"
+#UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/upload_csv", methods=["POST"])
@@ -318,4 +319,5 @@ def logout():
 # ================= START =================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
