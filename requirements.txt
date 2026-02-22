@@ -1,5 +1,7 @@
 Flask
+gunicorn
 mysql-connector-python
 PyPDF2
 bcrypt
 streamlit
+
