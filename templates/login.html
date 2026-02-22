@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Practice Platform</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1: #0f1724;
+      --bg2: #071025;
+      --card: rgba(255,255,255,0.03);
+      --accent: linear-gradient(135deg,#6EE7B7 0%, #60A5FA 100%);
+      --muted: #9aa7b2;
+      --glass: rgba(255,255,255,0.02);
+      --danger: #ff6b6b;
+      --radius: 14px;
+      --shadow: 0 6px 22px rgba(2,6,23,0.7);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: radial-gradient(1000px 600px at 10% 10%, rgba(96,165,250,0.08), transparent 10%),
+                  radial-gradient(700px 400px at 90% 90%, rgba(110,231,183,0.04), transparent 10%),
+                  linear-gradient(180deg,var(--bg1), var(--bg2));
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .center-login{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .login-card{
+      width:100%;
+      max-width:420px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      border: 1px solid rgba(255,255,255,0.03);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .brand {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:6px;
+    }
+    .logo-dot{
+      width:40px;height:40px;border-radius:10px;
+      background:var(--accent);
+      box-shadow:0 6px 20px rgba(96,165,250,0.12), inset 0 -6px 10px rgba(0,0,0,0.2);
+    }
+    h2{ margin:0 0 6px 0; font-weight:700; font-size:20px; }
+    p.lead { margin:0 0 18px 0; color:var(--muted); font-size:13px; }
+
+    form { display:flex; flex-direction:column; gap:12px; }
+    .field {
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    label { color:var(--muted); font-size:13px; }
+    input[type="email"], input[type="password"]{
+      width:100%;
+      padding:12px 14px;
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.03);
+      color:inherit;
+      border-radius:10px;
+      outline:none;
+      font-size:14px;
+      transition: box-shadow .15s, transform .06s, border-color .12s;
+    }
+    input::placeholder{ color: rgba(255,255,255,0.35); font-weight:500; }
+    input:focus{
+      box-shadow: 0 6px 18px rgba(96,165,250,0.06);
+      border-color: rgba(96,165,250,0.35);
+      transform: translateY(-1px);
+    }
+
+    .pw-row{ display:flex; gap:8px; align-items:center; }
+    .pw-toggle{
+      background:transparent;border:none;color:var(--muted);
+      font-size:13px;padding:8px;border-radius:8px;cursor:pointer;
+    }
+
+    .actions { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:6px; }
+    .btn {
+      appearance:none;border:0;padding:10px 14px;border-radius:10px;
+      background: linear-gradient(90deg,#60A5FA,#6EE7B7);
+      color:#052235;font-weight:600; cursor:pointer; box-shadow: 0 6px 18px rgba(28,99,255,0.12);
+      transition: transform .08s;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn[disabled]{ opacity:.6; cursor:not-allowed; transform:none; box-shadow:none; }
+
+    .btn-ghost{
+      background:transparent;border:1px solid rgba(255,255,255,0.04); color:var(--muted); padding:8px 12px;border-radius:10px;
+    }
+
+    .helper { font-size:13px; color:var(--muted); }
+
+    .server-error{
+      background: rgba(255,90,90,0.06);
+      border:1px solid rgba(255,90,90,0.12);
+      color:#ffd7d7;
+      padding:8px 10px;border-radius:8px;font-size:13px;margin-bottom:6px;
+    }
+
+    .inline-error { color: var(--danger); font-size:12px; margin-top:6px; }
+
+    /* small screens */
+    @media (max-width:420px){
+      .login-card{ padding:18px; border-radius:12px; }
+      .logo-dot{ width:36px;height:36px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="center-login">
+  <div class="login-card" role="document" aria-labelledby="loginTitle">
+    <div class="brand" aria-hidden="true">
+      <div class="logo-dot"></div>
+      <div>
+        <h2 id="loginTitle">Practice Platform</h2>
+        <div class="helper">Sign in to continue</div>
+      </div>
+    </div>
+
+    <!-- Server-side error (Flask templating spot) -->
+    {% if error %}
+    <div class="server-error" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form id="loginForm" method="post" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required aria-required="true" />
+        <div id="emailErr" class="inline-error" aria-live="polite" style="display:none"></div>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="pw-row">
+          <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required aria-required="true" style="flex:1;" />
+          <button type="button" class="pw-toggle" id="togglePw" aria-pressed="false" aria-label="Show password">Show</button>
+        </div>
+        <div id="pwErr" class="inline-error" aria-live="polite" style="display:none"></div>
+      </div>
+
+      <div class="actions">
+        <div style="display:flex;align-items:center;gap:10px">
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;color:var(--muted);font-size:13px;">
+            <input id="remember" name="remember" type="checkbox" style="width:14px;height:14px; accent-color:#60A5FA;"> Remember me
+          </label>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="submitBtn" class="btn" type="submit">Login</button>
+        </div>
+      </div>
+    </form>
+
+    <div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;">
+      <a href="/help" style="color:var(--muted);font-size:13px;text-decoration:none">Need help?</a>
+      <a href="/signup" class="btn-ghost" style="text-decoration:none">Create account</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Simple client-side validation + UX
+  (function(){
+    const form = document.getElementById('loginForm');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const submitBtn = document.getElementById('submitBtn');
+    const emailErr = document.getElementById('emailErr');
+    const pwErr = document.getElementById('pwErr');
+    const toggle = document.getElementById('togglePw');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function validateEmail(){
+      const v = email.value.trim();
+      if(!v){
+        emailErr.style.display = 'block';
+        emailErr.innerText = 'Email is required';
+        return false;
+      }
+      if(!emailRegex.test(v)){
+        emailErr.style.display = 'block';
+        emailErr.innerText = 'Enter a valid email address';
+        return false;
+      }
+      emailErr.style.display = 'none';
+      emailErr.innerText = '';
+      return true;
+    }
+
+    function validatePassword(){
+      const v = password.value;
+      if(!v){
+        pwErr.style.display = 'block';
+        pwErr.innerText = 'Password is required';
+        return false;
+      }
+      if(v.length < 6){
+        pwErr.style.display = 'block';
+        pwErr.innerText = 'Password must be at least 6 characters';
+        return false;
+      }
+      pwErr.style.display = 'none';
+      pwErr.innerText = '';
+      return true;
+    }
+
+    function setSubmitState(){
+      const ok = validateEmail() && validatePassword();
+      submitBtn.disabled = !ok;
+    }
+
+    // toggle show/hide password
+    toggle.addEventListener('click', function(){
+      const showing = password.type === 'text';
+      password.type = showing ? 'password' : 'text';
+      toggle.innerText = showing ? 'Show' : 'Hide';
+      toggle.setAttribute('aria-pressed', String(!showing));
+      toggle.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+      password.focus();
+    });
+
+    // live validation
+    email.addEventListener('input', setSubmitState);
+    password.addEventListener('input', setSubmitState);
+
+    // on submit: validate and show a loader state before sending
+    form.addEventListener('submit', function(e){
+      if(!validateEmail() || !validatePassword()){
+        e.preventDefault();
+        setSubmitState();
+        return;
+      }
+
+      // show loading state
+      submitBtn.disabled = true;
+      const orig = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Signing in…';
+      // Let the form submit (server will respond). If you'd rather do AJAX, replace below.
+      // If the server responds with an error and returns to this page, server-side {{ error }} will display above.
+    });
+
+    // initial state
+    setSubmitState();
+  })();
+</script>
+
+</body>
+</html>

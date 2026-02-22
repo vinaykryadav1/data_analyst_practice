@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel" style="margin:28px;padding:20px;">
+  <h2>User Profile</h2>
+  <div class="panel-card">
+    <p><strong>Email:</strong> {{ session.get('user') }}</p>
+    <p><strong>Score:</strong> <span id="profileScore">0</span></p>
+    <p><strong>Submissions:</strong></p>
+    <div id="userSubs">Loading...</div>
+  </div>
+</section>
+
+<script>
+fetch('/user/submissions').then(r=>r.json()).then(d=>{
+  const node = document.getElementById('userSubs');
+  if(!d || d.length==0) node.innerText = "No submissions yet";
+  else {
+    node.innerHTML = '<ul>'+ d.map(s=>`<li>${s.question_id} (${s.section}) — ${s.created_at}</li>`).join('') +'</ul>';
+    document.getElementById('profileScore').innerText = d.score || document.getElementById('userScore').innerText;
+  }
+});
+</script>
+{% endblock %}

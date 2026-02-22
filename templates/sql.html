@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="ide-grid">
+
+  <!-- LEFT: Tables (dropdown) + Upload (drag/drop) + Questions + Filter -->
+  <aside class="panel left-panel">
+    <div class="panel-card">
+      <h4 class="panel-title">Tables</h4>
+      <select id="tablesDropdown" class="select-full">
+        <option value="">-- Select table --</option>
+      </select>
+    </div>
+
+    <div class="panel-card" style="margin-top:12px;">
+      <h4 class="panel-title">Upload CSV</h4>
+      <div id="dropArea" class="drop-area">
+        <div class="drop-inner">
+          <div>Drag &amp; drop CSV here</div>
+          <div class="muted">or click to choose a file</div>
+          <input id="csvFile" type="file" accept=".csv" style="display:none" />
+          <button class="btn" id="csvChooseBtn">Choose file</button>
+        </div>
+      </div>
+      <div id="dropMsg" style="margin-top:8px;font-size:13px;color:var(--muted)"></div>
+    </div>
+
+    <div class="panel-card grow" style="margin-top:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h4 class="panel-title" style="margin:0">Questions</h4>
+        <div>
+          <select id="filterDifficulty" class="select-sm">
+            <option value="all">All</option>
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="questionsList" class="questions-list" style="margin-top:10px;max-height:46vh;overflow:auto">
+        {% for q in questions %}
+        <div class="qitem" data-difficulty="{{ q.difficulty or 'all' }}" data-qid="{{ q.id }}" onclick="selectQuestion(this)">
+          <div class="qtext">{{ q.question }}</div>
+          <div class="qmeta"><span class="chip">{{ q.difficulty or 'all' }}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </aside>
+
+  <!-- CENTER: Question + Answer box (reveal will populate here) -->
+  <section class="panel sql_center-panel">
+    <div class="panel-card">
+      <h2 id="qtext" class="question-heading">Select a question to start</h2>
+      <p id="qdesc" class="question-desc">The question text will appear here when you pick one from the left.</p>
+
+      <div class="panel-card" style="margin-top:12px;background:var(--glass)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="margin:8px 0">Answer Preview</h4>
+          <div>
+            <button class="btn-ghost" onclick="clearAnswerBox()">Clear</button>
+            <button class="btn" onclick="copyAnswer()">Copy</button>
+          </div>
+        </div>
+        <pre id="answerBox" class="output-box" style="min-height:120px"></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHT: Editor + Controls (increased area) -->
+  <aside class="panel sql_right-panel">
+    <div class="panel-card editor-card">
+      <div class="editor-toolbar" style="justify-content:flex-end">
+        <button class="btn" onclick="runSQL()">Run</button>
+        <button class="btn-ghost" onclick="reveal()">Reveal</button>
+        <button class="btn" onclick="submitCode('sql')">Submit</button>
+      </div>
+
+      <div id="editor" class="editor-container" style="height:420px;"></div>
+    </div>
+  </aside>
+
+  <!-- BOTTOM: Output (expandable/resizable) -->
+  <section class="panel bottom-panel">
+    <div class="panel-card" style="position:relative">
+      <div class="output-header">
+        <h4>Output</h4>
+        <div class="output-actions">
+          <button class="btn-ghost" onclick="toggleOutputExpand()">Toggle Expand</button>
+          <button class="btn-ghost" onclick="downloadOutput()">Download</button>
+        </div>
+      </div>
+
+      <div id="outputWrap" style="margin-top:7px; display:flex; gap:12px;">
+        <div id="output" class="output-box" style="flex:1;min-height:120px;overflow:auto"></div>
+      </div>
+
+      <div style="margin-top:10px;color:var(--muted);font-size:13px">Tip: click table headers to copy column name</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // small inline script to show that the page-level functions will exist
+  // main logic is in /static/script.js which will attach handlers
+</script>
+
+{% endblock %}

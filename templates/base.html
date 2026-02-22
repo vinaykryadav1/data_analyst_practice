@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Practice Platform</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- main CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="top-left">
+      <div class="logo gradient-text">Practice Platform</div>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/sql">SQL</a>
+        <a href="/python">Python</a>
+        <a href="/powerbi">Power BI</a>
+        <a href="/interview">Interview</a>
+        <a href="/learn">Learn</a>
+      </nav>
+    </div>
+
+    <div class="top-center">
+      <div class="status">
+        <span class="smallmuted">User:</span> <strong>{{ session.get("user") or 'Guest' }}</strong>
+        <span class="dot">•</span>
+        <span class="smallmuted">Score:</span> <strong id="userScore">0</strong>
+        <span class="dot">•</span>
+        <span class="smallmuted">Time:</span> <strong id="timer">00:00</strong>
+      </div>
+    </div>
+
+    <div class="top-right">
+      {% if session.get("user") %}
+        <a href="/logout" class="btn-ghost">Logout</a>
+      {% else %}
+        <a href="/login" class="btn">Login</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="app-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Monaco loader (once) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
+  <script>
+    // configure AMD loader to point to Monaco's vs/ folder
+    require.config({
+      paths: { vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs" }
+    });
+
+  </script>
+
+  <!-- Main app script (load after loader/config) -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

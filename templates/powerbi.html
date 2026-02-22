@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="pbi_grid" style="grid-template-columns:300px 1fr; grid-template-areas:'left center' 'left bottom'">
+
+  <!-- LEFT: QUESTIONS -->
+  <aside class="panel pbileft-panel">
+    <div class="panel-card">
+      <h4 class="panel-title">Power BI Questions</h4>
+
+      <div class="questions-list">
+        {% for q in questions %}
+        <div class="qitem" onclick="loadQ('{{q.id}}', `{{ q.question|replace('\n',' ') }}`)">
+          <div class="qtext">{{ q.question }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </aside>
+
+
+  <!-- CENTER -->
+  <section class="panel center-panel">
+    <div class="panel-card">
+
+      <h2 id="qtext">Select Power BI question</h2>
+      <p id="qdesc" class="question-desc">
+        Expected answer, DAX or notes will appear here.
+      </p>
+
+      <!-- Reveal button -->
+      <div style="margin-top:12px">
+        <button class="btn" onclick="revealPowerBI()">Reveal Answer</button>
+      </div>
+
+      <!-- Solution preview -->
+      <pre id="answerText" class="output-box" style="min-height:120px;"></pre>
+
+
+      <!-- USER ANSWER TEXTAREA -->
+      <div style="margin-top:18px;">
+        <h4>Your Answer</h4>
+
+        <textarea id="powerbiUserAnswer"
+          style="
+            width:100%;
+            height:150px;
+            background:#071025;
+            color:#fff;
+            border-radius:10px;
+            border:1px solid rgba(255,255,255,0.08);
+            padding:12px;
+            font-family:monospace;
+          "></textarea>
+
+        <div style="margin-top:10px; display:flex; gap:10px;">
+          <button class="btn" onclick="savePowerBIAnswer()">Save</button>
+          <button class="btn-ghost" onclick="clearPowerBIAnswer()">Clear</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}

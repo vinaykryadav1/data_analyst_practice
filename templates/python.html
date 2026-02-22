@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="py_layout" style="grid-template-columns:320px 1fr 1.2fr; grid-template-rows:auto 1fr; gap:16px; padding:24px;">
+
+  <!-- LEFT PANEL -->
+  <aside class="panel py_left-panel">
+
+    <!-- Upload CSV -->
+    <div class="panel-card">
+      <h4 class="panel-title">Upload CSV</h4>
+
+      <div id="dropAreaPy" class="drop-area"
+           style="min-height:140px;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+        <div>
+          <div style="text-align:center;color:var(--muted);">Drag & drop CSV here</div>
+
+          <div style="text-align:center;margin-top:25px;">
+            <button class="btn">Choose file</button>
+            <input id="csvFilePy" type="file" accept=".csv" style="display:none"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUESTIONS LIST -->
+    <div class="panel-card grow" style="margin-top:16px; overflow:auto;">
+
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h4 class="panel-title" style="margin:0">Questions</h4>
+
+        <!-- Difficulty filter -->
+        <select id="pyFilterDifficulty" class="select-sm">
+          <option value="all">All</option>
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div id="pyList"
+           style="display:flex;flex-direction:column;gap:8px;margin-top:12px;max-height:60vh;overflow:auto;">
+
+        {% for q in questions %}
+        <div class="qitem"
+             data-qid="{{q.id}}"
+             data-difficulty="{{ q.difficulty or 'medium' }}"
+             onclick="selectPyQuestionFromList(this)"
+             style="padding:10px;border-radius:8px;cursor:pointer;">
+
+          <div class="qtext">{{ q.question }}</div>
+
+          <div style="margin-top:6px">
+            <span class="chip">{{ q.difficulty or 'medium' }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </aside>
+  <!-- END LEFT PANEL -->
+
+
+  <!-- CENTER PANEL -->
+  <section class="panel py_center-panel">
+
+    <div class="panel-card">
+      <h2 id="pyQTitle" class="question-heading">Select question</h2>
+      <p id="pyQDesc" class="question-desc" style="color:var(--muted)">
+        Pick a question from the left. Click Reveal to load answer.
+      </p>
+    </div>
+
+    <!-- ANSWER BOX -->
+    <div class="panel-card" style="margin-top:14px;">
+      <div style="display:flex;justify-content:space-between;">
+        <h4>Answer</h4>
+
+        <div>
+          <button class="btn-ghost" onclick="clearPyAnswer()">Clear</button>
+          <button class="btn" onclick="copyPyAnswer()">Copy</button>
+        </div>
+      </div>
+
+      <pre id="pyAnswer" class="output-box" style="min-height:140px;"></pre>
+    </div>
+
+    <!-- OUTPUT BOX -->
+    <div class="panel-card" style="margin-top:14px;">
+      <div style="display:flex;justify-content:space-between;">
+        <h4>Output</h4>
+
+        <div>
+          <button class="btn-ghost" onclick="toggleOutputExpand()">Expand</button>
+          <button class="btn-ghost" onclick="downloadPyOutput()">Download</button>
+          <button class="btn-ghost" onclick="clearPyOutput()">Clear</button>
+        </div>
+      </div>
+
+      <pre id="pyOutput" class="output-box" style="min-height:180px;"></pre>
+    </div>
+
+  </section>
+  <!-- END CENTER -->
+
+
+  <!-- RIGHT PANEL (EDITOR) -->
+  <aside class="panel py_right-panel">
+
+    <div class="panel-card editor-card" style="height:100%;">
+
+      <div class="editor-toolbar" style="justify-content:flex-end;gap:8px;">
+        <button class="btn" onclick="runPython()">Run</button>
+        <button class="btn-ghost" onclick="revealPython()">Reveal</button>
+        <button class="btn" onclick="submitCode('python')">Submit</button>
+      </div>
+
+      <div id="pyEditor" style="width:100%;height:520px;margin-top:12px;"></div>
+
+      <textarea id="pyFallback"
+                style="display:none;width:100%;height:420px;margin-top:10px;background:#071025;color:#e6eef8;border-radius:8px;border:1px solid rgba(255,255,255,0.03);padding:12px;font-family:monospace;"></textarea>
+
+      <div id="pyDiag" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
+
+    </div>
+
+  </aside>
+  <!-- END RIGHT -->
+
+</div>
+
+{% endblock %}

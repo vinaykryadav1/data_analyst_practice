@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+:root{
+  --bg:#071025;
+  --card:#071a2a;
+  --text:#e6eef8;
+  --muted:#9fb3c6;
+  --accent:#60A5FA;
+  --accent2:#6EE7B7;
+}
+
+.home-hero{
+  position:relative;
+  overflow:hidden;
+  padding:120px 20px;
+  background:#071025;
+  color:var(--text);
+}
+
+/* Moving gradient background */
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:radial-gradient(circle at 30% 30%, #0d2a44 0%, transparent 40%),
+             radial-gradient(circle at 70% 70%, #0a3d52 0%, transparent 40%);
+  animation:moveBg 20s linear infinite;
+  z-index:0;
+}
+
+@keyframes moveBg{
+  0%{transform:translate(0,0) rotate(0deg);}
+  50%{transform:translate(10%,10%) rotate(180deg);}
+  100%{transform:translate(0,0) rotate(360deg);}
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+  position:relative;
+  z-index:2;
+  flex-wrap:wrap;
+}
+
+.hero-left{flex:1}
+.hero-right{width:420px;transition:transform .2s ease}
+
+/* Stroke Title */
+.title-svg{width:100%;max-width:800px}
+.title-text{
+  fill:none;
+  stroke:#6EE7B7;
+  stroke-width:2;
+  font-size:54px;
+  font-weight:700;
+  font-family:Inter,sans-serif;
+}
+
+.hero-sub{color:var(--muted);margin:18px 0}
+
+.btn{
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#001018;
+}
+.btn-outline{
+  border:1px solid rgba(255,255,255,0.1);
+  color:white;
+}
+
+/* Dashboard */
+.hero-svg{
+  width:100%;
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,.6));
+}
+
+@media(max-width:900px){
+  .container{flex-direction:column}
+  .hero-right{width:100%}
+}
+</style>
+
+<section class="home-hero">
+
+<div class="container">
+
+<div class="hero-left">
+
+<svg viewBox="0 0 900 120" class="title-svg">
+  <text x="0" y="80" class="title-text">
+    Master Data Analytics Interviews
+  </text>
+</svg>
+
+<p class="hero-sub">
+Practice SQL, Python & Power BI interview questions in one platform.
+</p>
+
+<div style="display:flex;gap:12px;">
+<a class="btn btn-primary" href="/sql">Start SQL</a>
+<a class="btn btn-outline" href="/python">Python</a>
+<a class="btn btn-outline" href="https://bytgfwtpmagkl8sxnmewuq.streamlit.app/"target="_blank">Automation Tool</a>
+</div>
+
+
+</div>
+
+<div class="hero-right" id="parallaxBox">
+
+<svg viewBox="0 0 420 260" class="hero-svg">
+<rect x="20" y="20" width="380" height="220" rx="16" fill="#071a2a"/>
+<rect x="60" y="60" width="300" height="140" rx="10" fill="#0b2234"/>
+<rect x="80" y="90" width="120" height="10" rx="4" fill="#60A5FA" class="line"/>
+<rect x="80" y="110" width="200" height="10" rx="4" fill="#60A5FA" class="line"/>
+<rect x="80" y="130" width="160" height="10" rx="4" fill="#60A5FA" class="line"/>
+<rect x="260" y="120" width="14" height="40" rx="3" fill="#6EE7B7" class="bar"/>
+<rect x="280" y="100" width="14" height="60" rx="3" fill="#6EE7B7" class="bar"/>
+<rect x="300" y="80" width="14" height="80" rx="3" fill="#6EE7B7" class="bar"/>
+</svg>
+
+</div>
+
+</div>
+</section>
+<!-- Footer -->
+<footer class="home-footer">
+  <div class="footer-content">
+
+    <div class="footer-left">
+      © 2026 Vinay Yadav | Data Analytics Practice Platform
+    </div>
+
+    <div class="footer-right">
+      <a href="https://github.com/vinaykryadav1"
+         target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/vinay-yadav-4234a1246/"
+         target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+/* Stroke animation */
+const drawable = anime.createDrawable('.title-text');
+anime({
+targets:drawable,
+draw:['0% 0%','0% 100%'],
+duration:2000,
+easing:'easeInOutSine'
+});
+
+/* Floating dashboard */
+anime({
+targets:'.hero-svg',
+translateY:[-10,10],
+duration:4000,
+direction:'alternate',
+loop:true,
+easing:'easeInOutSine'
+});
+
+/* Bar animation */
+anime({
+targets:'.bar',
+scaleY:[0,1],
+transformOrigin:'bottom',
+delay:anime.stagger(200),
+duration:1200,
+easing:'easeOutBack'
+});
+
+/* Smooth Parallax */
+const box=document.getElementById("parallaxBox");
+document.addEventListener("mousemove",(e)=>{
+let x=(e.clientX/window.innerWidth-0.5)*15;
+let y=(e.clientY/window.innerHeight-0.5)*15;
+box.style.transform=`translate(${x}px,${y}px)`;
+});
+
+});
+</script>
+
+{% endblock %}

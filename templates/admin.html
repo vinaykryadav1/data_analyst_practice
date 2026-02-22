@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel" style="margin:28px;padding:20px;">
+  <h2>Admin — Manage Questions</h2>
+
+  <div class="panel-card">
+    <form id="addQForm">
+      <label>Section</label>
+      <select id="aq_section"><option value="sql">SQL</option><option value="python">Python</option><option value="powerbi">PowerBI</option></select>
+      <label>Question</label>
+      <textarea id="aq_text" style="width:100%;height:90px"></textarea>
+      <label>Difficulty</label>
+      <select id="aq_diff"><option>easy</option><option selected>medium</option><option>hard</option></select>
+      <div style="margin-top:12px">
+        <button class="btn" type="button" onclick="addQuestion()">Add Question</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="adminMsg" style="margin-top:12px"></div>
+</section>
+
+<script>
+function addQuestion(){
+  const section = document.getElementById('aq_section').value;
+  const question = document.getElementById('aq_text').value;
+  const diff = document.getElementById('aq_diff').value;
+  if(!question.trim()) { alert('type question'); return; }
+  // call a server endpoint (you need to implement /admin/add in app.py or adapt this)
+  fetch('/admin/add', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({section,question,diff}) })
+    .then(r=>r.json()).then(d=>{
+      document.getElementById('adminMsg').innerText = d.msg || d.error || 'Added';
+    });
+}
+</script>
+{% endblock %}
